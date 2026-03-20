@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Canvas dot-grid background ──────────────────── */
+.canvas-grid {
+  background-color: #f0f4f8;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, .2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, .2) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ── Shared form components ───────────────────────── */
+@layer components {
+  .s-label {
+    @apply text-[10px] tracking-[1.4px] text-slate-400 mb-1 uppercase font-mono block;
+  }
+  .s-input {
+    @apply w-full bg-white border-[1.5px] border-slate-200 text-slate-800
+           px-2.5 py-1.5 text-xs font-mono rounded-md outline-none
+           transition-colors focus:border-blue-500;
+  }
+  .s-select {
+    @apply bg-white border-[1.5px] border-slate-200 text-slate-700
+           px-2 py-1.5 text-[11px] font-mono rounded-md outline-none cursor-pointer;
+  }
+  .btn-dash {
+    @apply block py-1.5 mt-1 bg-transparent border-[1.5px] border-dashed border-blue-500
+           text-blue-600 cursor-pointer font-mono text-[11px] rounded-md
+           hover:bg-blue-50 transition-colors text-center;
+  }
+  .btn-del {
+    @apply block py-1.5 bg-red-50 border-[1.5px] border-red-200
+           text-red-600 cursor-pointer font-mono text-[11px] rounded-md
+           hover:bg-red-100 transition-colors text-center;
+  }
+  .btn-icon-del {
+    @apply bg-transparent border-none text-red-500 cursor-pointer
+           px-1.5 py-0.5 rounded text-base font-bold leading-none
+           hover:bg-red-50 transition-colors flex-shrink-0;
+  }
+}
+
+/* ── Base reset ───────────────────────────────────── */
+html, body, #__nuxt {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'IBM Plex Sans', sans-serif;
+}

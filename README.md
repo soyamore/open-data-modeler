@@ -2,6 +2,10 @@
 
 **Open Data Modeler** is a free, open-source web application for designing relational database schemas visually using the **Merise** methodology. Create Conceptual Data Models (CDM) and Logical Data Models (LDM), then export them as PNG, PDF, or SQL.
 
+![Home page](./assets/images/home.png)
+
+![Editor](./assets/images/editor.png)
+
 ---
 
 ## Table of Contents
